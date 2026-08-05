@@ -1,3 +1,7 @@
+/* ===================================================
+   STACKPY / STACK PARAGUAY - ESTILOS OFICIALES
+   =================================================== */
+
 /* Variables de Color de la Marca */
 :root {
     --bg-dark: #0d1117;
@@ -16,17 +20,23 @@ body {
     padding: 0;
 }
 
+/* Cabecera / Navegación (Optimizada para Móviles) */
 header {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos bajen sin encimarse */
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(22, 27, 34, 0.8);
+    gap: 15px; /* Espaciado entre elementos */
+    padding: 15px 20px;
+    background-color: rgba(22, 27, 34, 0.95);
     border-bottom: 1px solid #30363d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: var(--text-white);
 }
@@ -35,20 +45,40 @@ header {
     color: var(--cyan-accent);
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 nav a {
     color: var(--text-light);
     text-decoration: none;
-    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cyan-accent);
 }
 
 .btn-wa {
     background-color: #25d366;
     color: #fff !important;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 8px 14px;
+    border-radius: 6px;
     font-weight: bold;
+    font-size: 13px;
+    white-space: nowrap; /* Evita que el texto del botón se corte en 2 líneas */
+    transition: opacity 0.3s ease;
 }
 
+.btn-wa:hover {
+    opacity: 0.9;
+}
+
+/* Sección Principal / Hero */
 .hero {
     text-align: center;
     padding: 80px 20px;
@@ -56,25 +86,35 @@ nav a {
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 36px;
     color: var(--text-white);
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 18px;
-    max-width: 600px;
+    font-size: 17px;
+    max-width: 650px;
     margin: 0 auto 30px auto;
+    line-height: 1.5;
 }
 
 .btn-main {
+    display: inline-block;
     background: linear-gradient(90deg, var(--primary-blue), var(--cyan-accent));
     color: white;
-    padding: 15px 30px;
+    padding: 14px 28px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.2);
+    transition: transform 0.2s ease;
 }
 
+.btn-main:hover {
+    transform: translateY(-2px);
+}
+
+/* Sección de Servicios */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -84,25 +124,42 @@ nav a {
 .container h2 {
     text-align: center;
     color: var(--text-white);
+    font-size: 28px;
     margin-bottom: 40px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
 
 .card {
     background-color: var(--card-bg);
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #30363d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--cyan-accent);
 }
 
 .card h3 {
     color: var(--cyan-accent);
     margin-top: 0;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #8b949e;
 }
 
 .price {
@@ -110,11 +167,28 @@ nav a {
     margin-top: 15px;
     font-weight: bold;
     color: var(--text-white);
+    font-size: 15px;
 }
 
+/* Pie de página */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
     border-top: 1px solid #30363d;
-    font-size: 14px;
+    font-size: 13px;
+    color: #8b949e;
+}
+
+/* Ajustes Adicionales para Pantallas Muy Pequeñas */
+@media (max-width: 480px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 15px;
+    }
 }
