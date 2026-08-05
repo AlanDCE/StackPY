@@ -85,7 +85,7 @@ nav a {
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background: radial-gradient(circle, rgba(0,82,255,0.15) 0%, rgba(13,17,23,1) 100%);
+    background: radial-gradient(circle, rgba(0, 82, 255, 0.15) 0%, rgba(13, 17, 23, 1) 100%);
 }
 
 .hero h1 {
@@ -235,4 +235,32 @@ footer {
     font-size: 13px;
     color: #8b949e;
 }
- 
+
+/* Estilos para Multimedia en el Portafolio */
+.project-header {
+    margin-bottom: 15px;
+}
+
+.project-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+}
+
+.video-container {
+    width: 100%;
+    max-width: 320px;
+    /* Tamaño ideal para simular la pantalla de un celular */
+    margin: 20px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid #30363d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.app-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
