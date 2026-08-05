@@ -1,8 +1,7 @@
 /* ===================================================
-   STACKPY / STACK PARAGUAY - ESTILOS OFICIALES
+   STACKPY / STACK PARAGUAY - ESTILOS OFICIALES (CORREGIDO MÓVIL)
    =================================================== */
 
-/* Variables de Color de la Marca */
 :root {
     --bg-dark: #0d1117;
     --card-bg: #161b22;
@@ -20,19 +19,148 @@ body {
     padding: 0;
 }
 
-/* Cabecera / Navegación (Optimizada para Móviles) */
+/* Cabecera Adaptable */
 header {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos bajen sin encimarse */
     justify-content: space-between;
     align-items: center;
-    gap: 15px; /* Espaciado entre elementos */
     padding: 15px 20px;
-    background-color: rgba(22, 27, 34, 0.95);
+    background-color: #161b22;
     border-bottom: 1px solid #30363d;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-white);
+}
+
+.logo span {
+    color: var(--cyan-accent);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-wa {
+    background-color: #25d366;
+    color: #fff !important;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Reglas Especiales para Móviles (Evita superposición de botones) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* Sección Hero */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle, rgba(0,82,255,0.15) 0%, rgba(13,17,23,1) 100%);
+}
+
+.hero h1 {
+    font-size: 30px;
+    color: var(--text-white);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    line-height: 1.5;
+}
+
+.btn-main {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary-blue), var(--cyan-accent));
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+/* Contenedor y Tarjetas */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.container h2 {
+    text-align: center;
+    color: var(--text-white);
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+}
+
+.card h3 {
+    color: var(--cyan-accent);
+    margin-top: 0;
+    font-size: 17px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #8b949e;
+}
+
+.price {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--text-white);
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #30363d;
+    font-size: 13px;
+    color: #8b949e;
 }
 
 .logo {
